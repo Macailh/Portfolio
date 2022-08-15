@@ -1,0 +1,314 @@
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda; /* #64ffda #01c4e7*/
+    --green-tint: rgba(100, 255, 219, 0.174);
+    --pink: #f57dff;
+    --blue: #57cbff;
+    --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+}
+
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--dark-slate);
+    border: 3px solid var(--navy);
+    border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--navy);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--navy);
+    display: grid;
+    grid-template-areas:
+        ". l-h . "
+        ". l-m . "
+        "l-l l-f l-r";
+    grid-template-columns: minmax(4vw,1fr) minmax(0,1320px) minmax(4vw,1fr);
+    grid-template-rows: max-content auto max-content;
+    color: var(--lightest-slate);
+    /*background-image: url(/img/Stars.svg);
+    background-size: 600px;*/
+}
+
+h2 {
+    font-size: xx-large;
+}
+
+.wrapper {
+    grid-area: l-m;
+}
+
+.main{
+    width: 100%;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main h1{
+    font-size: 64px;
+}
+
+.personal-buttons {
+    margin-top: 40px;
+    display: flex;
+}
+
+.personal-buttons a {
+    margin-right: 24px;
+    text-decoration: none;
+
+}
+
+.personal-buttons a:hover {
+    transform: scale(1.05);
+
+}
+
+.personal-buttons a svg {
+    fill: var(--green);
+}
+
+.personal-buttons a:nth-child(3) {
+    color: var(--green);
+    background-color: var(--navy);
+    font-size: var(--lg);
+    border-radius: 8px;
+    padding: 10px 25px 10px 25px;
+    border: 1px solid var(--green);
+}
+
+.personal-buttons a:nth-child(3):hover {
+    background-color: var(--green-tint);
+    transform: scale(1.05);
+}
+
+.me {
+
+
+}
+
+.me img {
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid var(--green);
+    background-color: var(--white);
+
+}
+
+.about-me {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+}
+
+.information {
+    width: 48%;
+}
+
+.information p {
+    margin-top: 20px;
+    font-size: large;
+    line-height: 1.5rem;
+}
+
+.information p:nth-child(2) {
+    margin-top: 30px;
+}
+
+.highlight {
+    text-decoration: none;
+    color: var(--green);
+}
+
+.skills {
+    width: 48%;
+}
+
+.container-logos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 115px 115px 115px;
+    margin-top: 30px;
+    border: 1px solid var(--green);
+
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.skills div svg {
+    height: 48px;
+}
+
+.skills div img {
+    height: 48px;
+}
+
+.projects {
+    margin: auto;
+    margin-top: 50px;
+    font-family: var(--font-sans);
+}
+
+.container-projects {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.container-projects div h3{
+    margin-top: 15px;
+}
+
+.container-projects div p{
+    margin-top: 15px;
+}
+
+.projects article {
+    width: 32%;
+
+}
+
+.projects article h2{
+    width: 100%;
+
+}
+
+.projects article img {
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projects article img:hover {
+    transition: all 0.6s ease;
+    filter: brightness(50%);
+}
+
+.projects article div:nth-child(2) {
+    background-color: var(--light-navy);
+    padding: 15px 20px 15px 20px;
+    color: var(--white);
+}
+
+.project-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+}
+
+.projects article div ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0 25px 0;
+}
+
+.projects article div a {
+    display: block;
+}
+
+.projects article div a:hover {
+    transform: scale(1.05);
+    
+}
+
+.projects article div svg {
+    fill: var(--white);
+}
+
+.projects article div li {
+    margin: 0 20px 5px 0;
+}
+
+.footer {
+    grid-area: l-f;
+    font-family: var(--font-mono);
+    text-align: center;
+    height: 40px;
+    color: var(--green);
+    font-weight: bolder;
+    padding-top: 10px;
+    margin-top: 30px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+@media(max-width: 1000px){
+    .projects article {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .projects article img {
+        height: 300px;
+    }
+
+    .about-me {
+        flex-wrap: wrap;
+    }
+
+    .information {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .skills {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+@media(max-width: 750px){
+    .main{
+        flex-flow: column;
+    }
+
+    .me img{
+        margin-top: 50px;
+    }
+    
+}
