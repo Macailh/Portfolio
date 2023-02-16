@@ -137,7 +137,9 @@ h2 {
 
 .me img {
   width: 400px;
-  border-radius: 10px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15rem;
   /*     border: 1px solid var(--green); */
   background-color: var(--white);
 }
