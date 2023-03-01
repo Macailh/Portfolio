@@ -185,7 +185,7 @@ h2 {
   grid-template-rows: 115px 115px 115px;
   margin-top: 30px;
   background-color: var(--dark-navy);
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px 10px;
   /*     border: 1px solid var(--green); */
 }
@@ -229,6 +229,8 @@ h2 {
 
 .projects article {
   width: 32%;
+  border-radius: 20px;
+  background-color: var(--light-navy);
 }
 
 .projects article h2 {
@@ -240,6 +242,7 @@ h2 {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 20px 20px 0 0;
 }
 
 .projects article img:hover {
@@ -251,6 +254,10 @@ h2 {
   background-color: var(--light-navy);
   padding: 15px 20px 15px 20px;
   color: var(--white);
+}
+
+.description {
+  border-radius: 0 0 20px 20px;
 }
 
 .project-details {
